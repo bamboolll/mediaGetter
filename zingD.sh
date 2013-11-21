@@ -9,7 +9,7 @@ out2="lines"
 out3="lines.links"
 
 #Step 1: Download HTML 
-wget $url -O $out1
+lynx -source $url > $out1
 #Step 2: Parse for link line
 cat $out1  | sed 's/<\/a>/\n/g' | grep music-download > $out2
 #Step 3: Parse for links and names and put to file
