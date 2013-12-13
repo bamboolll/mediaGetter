@@ -1,12 +1,13 @@
 #!/bin/sh
 
+outDir="../tmp"
 url=$1
 album=$2
 echo "url is $url"
 echo "output folder: $album"
-out1="album.html"
-out2="lines"
-out3="lines.links"
+out1="${outDir}/album.html"
+out2="${outDir}/lines"
+out3="${outDir}/lines.links"
 
 #Step 1: Download HTML 
 lynx -source $url > $out1
